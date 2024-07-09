@@ -1,0 +1,80 @@
+
+
+
+          <!-- .........................../////HEADER/////,.......................... -->
+        
+
+    <%- include("./common/header.ejs") %>
+  
+
+
+    <!-- ......................../////MENU/////....................... -->
+
+
+           
+        <div class="container row" style="margin-top: 100px; margin-bottom: 50px;">
+
+            
+             
+            <div class="col-md-1">
+                
+            </div>
+
+
+            <div class="col-12 col-md-5 mt-5">
+                
+                <img style="height: 500px; width: 400px;" src="/<%= productdata.upload %>">
+            </div>
+
+            <div class="col-md-1">  
+                
+            </div>
+
+            <div class="col-12 col-md-5 mt-5 textdeco">
+                <a href="/"> <img src="/images/homeicon.png" style="height: 20px; width: 20px;">
+                /Top deals</a>/<strong><%= productdata.productname %></strong>
+                <br>
+                <br>
+                <h6 style="font-size: 18px;"> <%= productdata.productname %></h6>
+                <h2></h2>
+                <p>₹ <%= productdata.productprice %>
+                    <del> ₹<%= productdata.productdiscount %></del>
+                    <span style="font-size: 13px; font-weight: bold; color: green;">Includes all taxes</span>
+                </p>
+
+                    
+                <h4 style="color: red;"> {<%= productdata.specialdiscount %> % Off}</h4>
+
+                <br>
+
+                <h5>Select size</h5>
+                <div class="box">
+                   S
+                </div>
+                <div class="box">
+                   M 
+                </div>
+                <div class="box">
+                   L 
+                </div>
+                <div class="box">
+                    XL
+                </div>
+                <br>
+                <button style=" font-weight: bold; font-size: 20px; width: 200px; height: 50px; background-color: blue; color: white;">Add To Cart</button>
+            </div>
+
+            
+
+        </div>
+
+        
+              
+            
+      
+         <!-- ............................./////FOOTER/////............................... -->
+
+    <%- include("./common/footer.ejs") %>
+
+
+   

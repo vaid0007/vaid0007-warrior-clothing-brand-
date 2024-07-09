@@ -1,0 +1,58 @@
+<div class="container-fluid row">
+    <div class="col-12">
+    <%- include("./header.ejs") %>
+</div>
+</div>
+
+<div class="container-fluid row">
+    <div class="col-3">
+        <%- include("./left.ejs") %>
+</div>
+
+<div class="col-2">
+
+</div>
+<div class="col-5">
+
+    <div class="containetr-fluid row mx-5 mt-5">
+        <h2 class="fs-1 fw-bolder text-center pb-4 text-center ">ADD PRODUCTS</h2>
+
+
+
+        <center>
+            <form action="/addproduct" enctype="multipart/form-data" method="post">
+  <input type="text" class="form-control" placeholder="product name" name="productname" value="" aria-label="Username" aria-describedby="basic-addon1">
+
+  <input type="text" class="form-control" placeholder="product price" name="productprice" value="" aria-label="Username" aria-describedby="basic-addon1">
+
+  <input type="text" class="form-control" placeholder="product discount" name="productdiscount" value="" aria-label="Username" aria-describedby="basic-addon1">
+
+  <input type="text" class="form-control" placeholder="special discount" name="specialdiscount" value="" aria-label="Username" aria-describedby="basic-addon1">
+
+  <input type="text" class="form-control" placeholder="brand name" name="productdetails" value="" aria-label="Username" aria-describedby="basic-addon1">
+
+  <input type="text" class="form-control" placeholder="Username" name="username" value="" aria-label="Username" aria-describedby="basic-addon1">
+
+  <input type="file" value="upload" name="upload">
+
+  <input type="submit" value="Submit">
+
+  
+</form>
+
+  </center>
+
+
+  </div>
+
+  <div class="col-2">
+
+  </div>
+
+
+
+    
+</div>
+
+ 
+

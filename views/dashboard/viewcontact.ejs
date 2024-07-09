@@ -1,0 +1,52 @@
+<div class="container-fluid row">
+    <div class="col-12">
+    <%- include("./header.ejs") %>
+  </div>
+  </div>
+  
+  <div class="container-fluid row">
+    <div class="col-3">
+        <%- include("./left.ejs") %>
+  </div>
+  
+  <div class="col-1">
+  
+  </div>
+  <div class="col-7">
+  
+      <div class="containetr-fluid row mx-5 mt-5">
+
+        <h2 class="fs-1 fw-bolder text-center pb-4 text-center ">VIEW CONTACT</h2>
+        <% if(datacontact.length>0){ %>
+            
+      <table class="table table-bordered table-hover">
+        <thead>
+          
+            <tr>
+              <th>Full name</th>
+              <th>Mobile</th>
+              <th>Email</th>
+              <th>Quary</th>
+            </tr>
+        
+          <% for(var i=0; i<datacontact.length; i++){%>
+            <tr>
+              <td><%= datacontact[i].fullname %></td>
+              <td><%= datacontact[i].mobile %></td>
+              <td><%= datacontact[i].email %></td>
+              <td><%= datacontact[i].query %></td>
+              <td><a href="/edit_1/<%= datacontact[i]._id %>"><button>Edit</button></a></td>
+              <td><a href="/delete_1/<%= datacontact[i]._id %>"><button>Delete</button></a></td>
+              
+            </tr>
+            <% } %>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <% } else { %>
+        No record found
+        <%} %>
+    </div>
+  
+    </div>

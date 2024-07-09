@@ -1,0 +1,59 @@
+<script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"></script>
+<script src="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css"></script>
+
+<div class="container-fluid row">
+    <div class="col-12">
+    <%- include("./header.ejs") %>
+  </div>
+  </div>
+  
+  <div class="container-fluid row">
+    <div class="col-3">
+        <%- include("./left.ejs") %>
+  </div>
+  
+  <div class="col-1">
+  
+  </div>
+  <div class="col-7">
+  
+      
+<div class="containetr-fluid row mx-5 mt-5">
+
+        <h2 class="fs-1 fw-bolder text-center pb-4 text-center ">VIEW SIGNUP</h2>
+        <% if(datasignup.length>0){ %>
+            
+      <table class="table table-bordered table-hover" id="example">
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Mobile</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i<datasignup.length; i++){%>
+          <tr>
+            <td><%= datasignup[i].firstname %></td>
+            <td><%= datasignup[i].lastname %></td>
+            <td><%= datasignup[i].mobile %></td>
+            <td><%= datasignup[i].email %></td>
+            <td><a href="/edit_2/<%= datasignup[i]._id %>"><button>Edit</button></a></td>
+            <td><a href="/delete_2/<%= datasignup[i]._id %>"><button>Delete</button></a></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+      No record found
+      <%} %>
+    </div>
+  
+    </div>
+    <script>
+    new DataTable('#example');
+    </script>

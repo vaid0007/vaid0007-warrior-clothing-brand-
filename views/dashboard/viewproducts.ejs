@@ -1,0 +1,61 @@
+<div class="container-fluid row">
+  <div class="col-12">
+  <%- include("./header.ejs") %>
+</div>
+</div>
+
+<div class="container-fluid row">
+  <div class="col-3">
+      <%- include("./left.ejs") %>
+</div>
+
+<div class="col-1">
+
+</div>
+<div class="col-7">
+
+    <div class="containetr-fluid row mt-5">
+
+      <h2 class="fs-1 fw-bolder text-center pb-4 text-center ">VIEW PRODUCTS</h2>
+
+      <input type="text" class="w-25" placeholder="search" name="search">
+    <input type="submit" class="w-25" value="sumbit" placeholder="search">
+
+      
+      <% if(dataproduct.length>0){ %>
+          
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>product name</th>
+          <th>product price</th>
+          <th>product discount</th>
+          <th>special discount</th>
+          <th>product details</th>
+          <th>username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(var i=0; i<dataproduct.length; i++){%>
+        <tr>
+          <td><%= dataproduct[i].productname %></td>
+          <td><%= dataproduct[i].productprice %></td>
+          <td><%= dataproduct[i].productdiscount %></td>
+          <td><%= dataproduct[i].specialdiscount %></td>
+          <td><%= dataproduct[i].productdetails %></td>
+          <td><%= dataproduct[i].username %></td>
+          <td><img style="width: 100px;" height="100px; " src="<%= dataproduct[i].upload %>"></td>
+          <td><a href="/edit/<%= dataproduct[i]._id %>"><button>Edit</button></a></td>
+          <td><a href="/delete/<%= dataproduct[i]._id %>"><button>Delete</button></a></td>
+          
+        </tr>
+        <% } %>
+
+      </tbody>
+    </table>
+    <% } else { %>
+      No record found
+      <%} %>
+  </div>
+
+  </div>
